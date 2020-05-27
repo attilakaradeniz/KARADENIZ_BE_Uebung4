@@ -41,6 +41,20 @@ class UserInputsController{
 
                     break;
 
+                case 'listCart' :
+                    echo 'you have chosen listCart'; // TEST
+
+                    break;
+
+                case 'addArticle' :
+                    echo 'you have chosen addArticle'; // TEST
+                    break;
+
+                case 'removeArticle' :
+                    echo 'you have chosen removeArticle'; // TEST
+
+                    break;
+
                 default: echo "choose your action";
             }
         }
