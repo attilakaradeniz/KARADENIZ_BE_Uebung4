@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e06550f7-42e3-492d-a4f8-bc3201c75f77" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7" />
+  <component name="ProjectId" id="1c1sV7Is7GvGmNUq087JV6yMXWW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e06550f7-42e3-492d-a4f8-bc3201c75f77" name="Default Changelist" comment="" />
+      <created>1589707454593</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589707454593</updated>
+      <workItem from="1589707455746" duration="14700000" />
+      <workItem from="1589905136093" duration="3313000" />
+      <workItem from="1590003391997" duration="1569000" />
+      <workItem from="1590125091132" duration="742000" />
+      <workItem from="1590468283425" duration="1029000" />
+      <workItem from="1590511486757" duration="1961000" />
+      <workItem from="1590527283274" duration="366000" />
+      <workItem from="1590554870817" duration="840000" />
+      <workItem from="1590591966584" duration="932000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="667" y="-970" key="#PHP" timestamp="1589711972136">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="667" y="-970" key="#PHP/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1589711972136" />
+    <state x="739" y="-818" key="FileChooserDialogImpl" timestamp="1590468395865">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="739" y="-818" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590468395865" />
+    <state x="794" y="-637" key="NewPhpFileDialog" timestamp="1589716205881">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="794" y="-637" key="NewPhpFileDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1589716205881" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1589707588067" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1589707466545">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1589707466545" />
+    <state x="656" y="-736" key="com.intellij.ide.util.TipDialog" timestamp="1590593317507">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="656" y="-736" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590593317507" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590527290351" />
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1589712614511">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1589712614511" />
+  </component>
+</project>
