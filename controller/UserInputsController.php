@@ -22,11 +22,36 @@ class UserInputsController{
                 case 'listTypes' :
                     $modelTypes = new StoreTypesModel();
                     $this->lisTypesData = $db->queryData("SELECT id, name FROM  product_types ORDER BY name");
-
-                    //$modelTypes->tableData($this->lisTypesData);
+                    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                    //$modelTypes->tableData($this->lisTypesData);
+//                    echo "\n";
+//                    echo "\n";
+//                    //print_r($this->lisTypesData);  // TEST to see the data
+//                    $bosArray = array();
+//                foreach($this->lisTypesData as $item){
+//                    $bosArray[] = $item;
+//                    print_r($item);
+//                    echo '<pre>';
+//                }
+//
+//                    $testToSee = array( 'product' => 'cream', 'tip' => 'vicik', 'price' => 'coookcok');
+//                    $JSON_testToSee = json_encode($testToSee);
+//                    $testToSee = "[".$testToSee."]";
+//
+//                    $this->view->output($testToSee);
+//
+//                    //$this->view->output($JSON_testToSee);
+//
+//                    //print_r($testToSee);
+//                    //echo $testToSee;
+//
+//                    echo "\n";
+//                    echo "\n";
+                    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     $data = $modelTypes->fetchTypesData($this->lisTypesData);
                     $this->view->output($data);
-                    //print_r($modelTypes->fetchTypesData($this->lisTypesData)); // TEST
+
+                     //print_r($modelTypes->fetchTypesData($this->lisTypesData)); // TEST
 
                     break;
 
@@ -48,6 +73,7 @@ class UserInputsController{
 
                 case 'addArticle' :
                     echo 'you have chosen addArticle'; // TEST
+
                     break;
 
                 case 'removeArticle' :
