@@ -4,9 +4,25 @@ class ShoppingCartModel
 {
     private $shoppingCart;
     private $productsArray;
+    private $productsDB;
+    private $amount;
+    private $statementProducts;
+    private $articleId;
+
+    public  function __construct()
+    {
+
+        $this->productsDB = new DatabaseService();
+        $this->productsDB->connect();
+        $this->statementProducts =
+        $this->productsDB->queryData();
 
 
-     /**
+
+    }
+
+
+    /**
  * @return mixed
  */
     public function getShoppingCart()
@@ -19,6 +35,13 @@ class ShoppingCartModel
 
     public function addToCart(){
 
+        // Session
+        if (!isset($_SESSION['shoppingCart'])) {
+            $_SESSION['shoppingCart'] = array();
+        }
+//        $shoppingCart = ['shoppingCart' =>  $_SESSION['shoppingCart']];
+
+        $_SESSION['shoppingCart'][] = $this->shoppingCart;
     }
 
 

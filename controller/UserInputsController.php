@@ -101,7 +101,7 @@ class UserInputsController
                     $this->view->output($_SESSION);
                     //$this->view->output($data);
                     //print_r($_SESSION['shoppingCart']);
-                    // session_destroy();
+                    // session_destroy(); // --------------------- IF ANYTHING GOES WRONG USE THIS ----------------------- /
                     break;
 
                 case 'removeArticle' :
