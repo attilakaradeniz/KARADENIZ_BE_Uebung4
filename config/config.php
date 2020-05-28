@@ -7,3 +7,4 @@ include "controller/UserInputsController.php";
 include "model/StoreTypesModel.php";
 include "model/StoreProductsModel.php";
 include "view/JsonView.php";
+include "model/ShoppingCartModel.php";

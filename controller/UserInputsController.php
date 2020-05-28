@@ -1,22 +1,34 @@
 <?php
 
-class UserInputsController{
+class UserInputsController
+{
     private $action;
     private $view;
     private $lisTypesData;
     private $productTypes;
+    private $articleId;
 
     public function __construct()
     {
         $this->view = new JsonView();
     }
 
-    public function route(){
+    public function route()
+    {
         $db = new DatabaseService();
         $db->connect();
 
-        if(isset($_GET['action'])){
-            $this->action = $_GET['action'];
+        // Session
+        if (!isset($_SESSION['shoppingCart'])) {
+            $_SESSION['shoppingCart'] = array();
+        }
+
+        $shoppingCart = ['shoppingCart' =>  $_SESSION['shoppingCart']];
+
+        if (isset($_GET['action'])) {
+            //$this->action = $_GET['action'];
+
+            $this->action = filter_input(INPUT_GET, "action", FILTER_SANITIZE_STRING);
 
             switch ($this->action) {
                 case 'listTypes' :
@@ -51,7 +63,7 @@ class UserInputsController{
                     $data = $modelTypes->fetchTypesData($this->lisTypesData);
                     $this->view->output($data);
 
-                     //print_r($modelTypes->fetchTypesData($this->lisTypesData)); // TEST
+                    //print_r($modelTypes->fetchTypesData($this->lisTypesData)); // TEST
 
                     break;
 
@@ -59,7 +71,7 @@ class UserInputsController{
 
                     $typeId = filter_input(INPUT_GET, "typeId", FILTER_SANITIZE_STRING);
                     $modelProducts = new StoreProductsModel();
-                    $statement = "SELECT t.name AS productTypeName, p.name AS productName FROM product_types t JOIN products p ON t.id = p.id_product_types WHERE t.id =".$typeId;
+                    $statement = "SELECT t.name AS productTypeName, p.name AS productName FROM product_types t JOIN products p ON t.id = p.id_product_types WHERE t.id =" . $typeId;
                     $data = $this->productTypes = $db->queryData($statement);
                     $resultData = $modelProducts->fetchProductsData($data);
                     $this->view->output($resultData);
@@ -72,8 +84,24 @@ class UserInputsController{
                     break;
 
                 case 'addArticle' :
-                    echo 'you have chosen addArticle'; // TEST
+                    // echo 'you have chosen addArticle'; // TEST
+                    $this->articleId = filter_input(INPUT_GET, "articleId", FILTER_SANITIZE_STRING);
+                    //$statement = "SELECT * FROM products WHERE id=119;"; // TEST
 
+                    $statement = "SELECT * FROM products WHERE id=" . $this->articleId;
+//                    $data = $db->queryData($statement);
+                    $data = $db->queryData($statement)[0]['name'];
+
+
+                    //$_SESSION['shoppingCart'][] = $data; // $_SESSION'a $data 'yı ekliyor
+
+                // Burada yapılan işlem list cart a ekleyip list cart'ın gösterilmesi
+                    array_push($_SESSION['shoppingCart'], ['articleName' => $data, 'amount' => 1]);
+
+                    $this->view->output($_SESSION);
+                    //$this->view->output($data);
+                    //print_r($_SESSION['shoppingCart']);
+                    // session_destroy();
                     break;
 
                 case 'removeArticle' :
@@ -81,14 +109,12 @@ class UserInputsController{
 
                     break;
 
-                default: echo "choose your action";
+                default:
+                    echo "choose your action";
             }
         }
 
     }
-
-
-
 
 
 }

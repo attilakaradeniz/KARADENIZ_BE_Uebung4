@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e06550f7-42e3-492d-a4f8-bc3201c75f77" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/model/ShoppingCartModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShoppingCart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/UserInputsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserInputsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +35,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\KARADENIZ_BE_Uebung4\model" />
+      <recent name="C:\xampp\htdocs\KARADENIZ_BE_Uebung4\controller" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -52,7 +60,8 @@
       <workItem from="1590527283274" duration="366000" />
       <workItem from="1590554870817" duration="840000" />
       <workItem from="1590591966584" duration="932000" />
-      <workItem from="1590594614372" duration="8652000" />
+      <workItem from="1590594614372" duration="21132000" />
+      <workItem from="1590638804153" duration="606000" />
     </task>
     <servers />
   </component>
@@ -64,27 +73,31 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="667" y="-970" key="#PHP/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1589711972136" />
+    <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590617443124">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1590617443124" />
     <state x="739" y="-818" key="FileChooserDialogImpl" timestamp="1590468395865">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="739" y="-818" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590468395865" />
-    <state x="763" y="-746" key="NewPhpClassDialog" timestamp="1590606761727">
+    <state x="763" y="-746" key="NewPhpClassDialog" timestamp="1590610082075">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="763" y="-746" key="NewPhpClassDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590606761727" />
-    <state x="794" y="-637" key="NewPhpFileDialog" timestamp="1589716205881">
+    <state x="763" y="-746" key="NewPhpClassDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590610082075" />
+    <state x="794" y="-637" key="NewPhpFileDialog" timestamp="1590609926309">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="794" y="-637" key="NewPhpFileDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1589716205881" />
+    <state x="794" y="-637" key="NewPhpFileDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590609926309" />
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1589707588067" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1589707466545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1589707466545" />
-    <state x="656" y="-736" key="com.intellij.ide.util.TipDialog" timestamp="1590593317507">
+    <state x="656" y="-736" key="com.intellij.ide.util.TipDialog" timestamp="1590638807412">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="656" y="-736" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590593317507" />
+    <state x="656" y="-736" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1590638807412" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590527290351" />
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1589712614511">
       <screen x="0" y="-1080" width="1920" height="1040" />
