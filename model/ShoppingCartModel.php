@@ -17,7 +17,6 @@ class ShoppingCartModel
 
     public function addToCart($id)
     {
-   //     $currentCart = $_SESSION['shoppingCart']; -29 zaten calısmıyordu
 
         if ($this->isInCart($id)) {
             foreach ($_SESSION['shoppingCart'] as $item) {
@@ -46,7 +45,6 @@ class ShoppingCartModel
 
             $_SESSION['shoppingCart'][] = $article;
 
-            //$_SESSION['shoppingCart'][] = ['articleName' => $temp, 'amount' => 1];
         }
     }
 
@@ -68,8 +66,6 @@ class ShoppingCartModel
     {
 //        $currentCart = $_SESSION['shoppingCart']; // -29
         $this->currentCart = $_SESSION['shoppingCart']; // +29
-        //$currentCart = 0; // 29 zaten
-        //$_SESSION['shoppingCart'] = array_values($currentCart); // 29 zaten
 
         if ($this->isInCart($id)) {
             //foreach ($currentCart as $item) { // -29
@@ -84,7 +80,6 @@ class ShoppingCartModel
         $currentCart = $this->removeEmptyArticles($id, $this->currentCart); // +29
         //$_SESSION['shoppingCart'] = $currentCart; // zaten
         $_SESSION['shoppingCart'] = array_values($currentCart);
-  //      $_SESSION['shoppingCart'] = array_values($this->currentCart); // zaten
     }
 
     //public function removeEmptyArticles($id, $currentCart) // -29
