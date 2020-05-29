@@ -4,7 +4,6 @@
     <list default="true" id="e06550f7-42e3-492d-a4f8-bc3201c75f77" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/UserInputsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UserInputsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/ShoppingCartModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ShoppingCartModel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +62,7 @@
       <workItem from="1590638804153" duration="5235000" />
       <workItem from="1590677690289" duration="23131000" />
       <workItem from="1590727443084" duration="3692000" />
-      <workItem from="1590771081676" duration="6861000" />
+      <workItem from="1590771081676" duration="13066000" />
     </task>
     <servers />
   </component>

@@ -59,9 +59,20 @@ class UserInputsController
 
                 case 'listCart' :
                     // echo 'you have chosen listCart'; // TEST
-                   $this->view->output($_SESSION); // TEST
-                   // here comes the listCart function call
+                    //$this->view->output($_SESSION); // TEST
+                  //$this->view->output($_SESSION['cart']); // TEST
 
+                    $arrayToShow['cart'] = $shoppingCart->listCart();
+                    $this->view->output($arrayToShow);
+
+
+
+
+
+
+                   // here comes the listCart function call
+                    //$dataShow = $shoppingCart->listCart();
+                    //$this->view->output($dataShow);
                     break;
 
                 case 'addArticle' :

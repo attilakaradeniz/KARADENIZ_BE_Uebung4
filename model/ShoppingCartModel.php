@@ -38,12 +38,14 @@ class ShoppingCartModel
             $article->articleName = $data[0]['name'];
             $article->id = $data[0]['id'];
             $article->price = $data[0]['price'];
-
             $article->amount = 1;
 
-            print_r($article);
+            //print_r($article);
 
             $_SESSION['cart'][] = $article;
+            //$_SESSION['cart'] = array_values($this->currentCart);
+
+
 
         }
     }
@@ -73,8 +75,8 @@ class ShoppingCartModel
             }
         }
 
-        $currentCart = $this->removeEmptyArticles($id, $this->currentCart); // +29
-        $_SESSION['Cart'] = array_values($currentCart);
+        $this->currentCart = $this->removeEmptyArticles($id, $this->currentCart); // +29
+        $_SESSION['cart'] = array_values($this->currentCart);
     }
 
     public function removeEmptyArticles($id, $currentCart) // +29
@@ -87,8 +89,24 @@ class ShoppingCartModel
         return $this->currentCart; // +29
     }
 
-    public function listCart($data)
+    public function listCart()
     {
+        $currentCart = $_SESSION['cart'];
+        //$currentCart = $_SESSION;
+
+        $arrayToShow = array();
+
+        foreach ($currentCart as $item) {
+
+            $showCart = new stdClass();
+            $showCart->articleName = $item->articleName;
+            $showCart->amount = $item->amount;
+            $showCart->status = "OK";
+
+            $arrayToShow[] = $showCart;
+
+        }
+        return $arrayToShow;
 
 
     }
