@@ -4,6 +4,7 @@ class ShoppingCartModel
 {
     //private $shoppingCartArray;
     private $productName;
+    private $currentCart; // 29
 
     public function getProductName($id)
     {
@@ -16,7 +17,7 @@ class ShoppingCartModel
 
     public function addToCart($id)
     {
-        $currentCart = $_SESSION['shoppingCart'];
+   //     $currentCart = $_SESSION['shoppingCart']; -29 zaten calısmıyordu
 
         if ($this->isInCart($id)) {
             foreach ($_SESSION['shoppingCart'] as $item) {
@@ -51,8 +52,10 @@ class ShoppingCartModel
 
     public function isInCart($id)
     {
-        $currentCart = $_SESSION['shoppingCart'];
-        foreach ($currentCart as $item) {
+        // $currentCart = $_SESSION['shoppingCart']; // -29
+        $this->currentCart = $_SESSION['shoppingCart']; // +29
+        //foreach ($currentCart as $item) { // -29
+            foreach ($this->currentCart as $item) { // +29
 
             if ($item->id == $id) {
                 return true;
@@ -63,29 +66,40 @@ class ShoppingCartModel
 
     public function removeFromCart($id)
     {
-        $currentCart = $_SESSION['shoppingCart'];
+//        $currentCart = $_SESSION['shoppingCart']; // -29
+        $this->currentCart = $_SESSION['shoppingCart']; // +29
+        //$currentCart = 0; // 29 zaten
+        //$_SESSION['shoppingCart'] = array_values($currentCart); // 29 zaten
 
         if ($this->isInCart($id)) {
-            foreach ($currentCart as $item) {
+            //foreach ($currentCart as $item) { // -29
+                foreach ($this->currentCart as $item) { // +29
                 if ($item->id == $id) {
                     $item->amount--;
                 }
             }
         }
 
-        $currentCart = $this->removeEmptyArticles($id, $currentCart);
-        $_SESSION['shoppingCart'] = $currentCart;
+//        $currentCart = $this->removeEmptyArticles($id, $currentCart); // -29
+        $currentCart = $this->removeEmptyArticles($id, $this->currentCart); // +29
+        //$_SESSION['shoppingCart'] = $currentCart; // zaten
+        $_SESSION['shoppingCart'] = array_values($currentCart);
+  //      $_SESSION['shoppingCart'] = array_values($this->currentCart); // zaten
     }
 
-    public function removeEmptyArticles($id, $currentCart)
+    //public function removeEmptyArticles($id, $currentCart) // -29
+    public function removeEmptyArticles($id, $currentCart) // +29
     {
-        //$currentCart = $_SESSION['shoppingCart'];
-        foreach ($currentCart as $item => $object) {
+        //$currentCart = $_SESSION['shoppingCart']; / zaten
+//        foreach ($currentCart as $item => $object) { // -29
+            foreach ($this->currentCart as $item => $object) { // +29
             if ($object->amount == 0) {
-                unset($currentCart[$item]);
+//                unset($currentCart[$item]); // -29
+                unset($this->currentCart[$item]); // +29
             }
         }
-        return $currentCart;
+//        return $currentCart; // -29
+        return $this->currentCart; // +29
     }
 
 

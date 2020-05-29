@@ -7,6 +7,7 @@ class UserInputsController
     private $lisTypesData;
     private $productTypes;
     private $articleId;
+    private $cart; // 29
 
     public function __construct()
     {
@@ -58,7 +59,8 @@ class UserInputsController
 
                 case 'listCart' :
                     // echo 'you have chosen listCart'; // TEST
-                    $this->view->output($_SESSION);
+                   $this->view->output($_SESSION);
+
                     break;
 
                 case 'addArticle' :
