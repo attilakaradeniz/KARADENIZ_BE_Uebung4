@@ -37,8 +37,9 @@ class ShoppingCartModel
 
             $article->articleName = $data[0]['name'];
             $article->id = $data[0]['id'];
-            $article->price = $data[0]['price'];
+            //$article->price = $data[0]['price'];
             $article->amount = 1;
+            $article->state = "OK";
 
             //print_r($article);
 
@@ -101,7 +102,7 @@ class ShoppingCartModel
             $showCart = new stdClass();
             $showCart->articleName = $item->articleName;
             $showCart->amount = $item->amount;
-            $showCart->status = "OK";
+            //$showCart->state = "OK";
 
             $arrayToShow[] = $showCart;
 
