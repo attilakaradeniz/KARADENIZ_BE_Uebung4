@@ -1,25 +1,25 @@
 <?php
 
-class StoreProductsModel{
+class StoreProductsModel
+{
 
     //private $modelProductsArray = [];
 
-    public function fetchProductsData($data){
-      // print_r($data);
+    public function fetchProductsData($data)
+    {
+        // print_r($data);
         $products = [];
 
         foreach ($data as $item) {
-            $products[] = array("name"=>$item['productName']);
+            $products[] = array("name" => $item['productName']);
         }
 
         $result = new stdClass();
 
-        if($data != null)
-        {
+        if ($data != null) {
             $productType = $data[0]['productTypeName'];
             $result->productType = $productType;
-        }
-        else {
+        } else {
             $result->productType = "No products in this category";
         }
 
@@ -28,8 +28,9 @@ class StoreProductsModel{
         return $result;
     }
 
-    private function getUrl(){
-        return "http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']."?action=listTypes";
+    private function getUrl()
+    {
+        return "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . "?action=listTypes";
     }
 
 }
