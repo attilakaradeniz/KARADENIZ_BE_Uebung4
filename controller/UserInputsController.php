@@ -20,8 +20,8 @@ class UserInputsController
         $db->connect();
 
         // Session
-        if (!isset($_SESSION['shoppingCart'])) {
-            $_SESSION['shoppingCart'] = array();
+        if (!isset($_SESSION['cart'])) {
+            $_SESSION['cart'] = array();
         }
 
         $shoppingCart = new ShoppingCartModel();
@@ -50,7 +50,7 @@ class UserInputsController
 
                     $typeId = filter_input(INPUT_GET, "typeId", FILTER_SANITIZE_STRING);
                     $modelProducts = new StoreProductsModel();
-                    $statement = "SELECT t.name AS productTypeName, p.name AS productName FROM product_types t JOIN products p ON t.id = p.id_product_types WHERE t.id =" . $typeId;
+                    $statement = "SELECT t.name AS productTypeName, p.name AS articleName FROM product_types t JOIN products p ON t.id = p.id_product_types WHERE t.id =" . $typeId;
                     $data = $this->productTypes = $db->queryData($statement);
                     $resultData = $modelProducts->fetchProductsData($data);
                     $this->view->output($resultData);
@@ -59,7 +59,8 @@ class UserInputsController
 
                 case 'listCart' :
                     // echo 'you have chosen listCart'; // TEST
-                   $this->view->output($_SESSION);
+                   $this->view->output($_SESSION); // TEST
+                   // here comes the listCart function call
 
                     break;
 
@@ -91,7 +92,7 @@ class UserInputsController
                     //print_r($shoppingCart->getProductName($this->articleId));
                     //$this->view->output($shoppingCart->getProductName($this->articleId)); // This brings it as json format
                     //print_r($shoppingCart->getProductName($this->articleId)); // this brings it as array format
-                    print_r($shoppingCart->getProductName($this->articleId)[0]['name']); // this grabs only at 0th position key:name's value , means just name as string format
+                    print_r($shoppingCart->getArticleName($this->articleId)[0]['name']); // this grabs only at 0th position key:name's value , means just name as string format
                     break;
 
                 default:

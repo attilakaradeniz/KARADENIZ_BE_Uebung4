@@ -3,23 +3,23 @@
 class ShoppingCartModel
 {
     //private $shoppingCartArray;
-    private $productName;
+    private $articleName;
     private $currentCart; // 29
 
-    public function getProductName($id)
+    public function getArticleName($id)
     {
         $statement = "SELECT name FROM products WHERE id = $id";
         $db = new DatabaseService();
         $db->connect();
 
-        return $this->productName = $db->queryData($statement);
+        return $this->articleName = $db->queryData($statement);
     }
 
     public function addToCart($id)
     {
 
         if ($this->isInCart($id)) {
-            foreach ($_SESSION['shoppingCart'] as $item) {
+            foreach ($_SESSION['cart'] as $item) {
                 if ($item->id == $id) {
                     $item->amount++;
                 }
@@ -35,7 +35,7 @@ class ShoppingCartModel
 
             $article = new stdClass();
 
-            $article->productName = $data[0]['name'];
+            $article->articleName = $data[0]['name'];
             $article->id = $data[0]['id'];
             $article->price = $data[0]['price'];
 
@@ -43,14 +43,14 @@ class ShoppingCartModel
 
             print_r($article);
 
-            $_SESSION['shoppingCart'][] = $article;
+            $_SESSION['cart'][] = $article;
 
         }
     }
 
     public function isInCart($id)
     {
-        $this->currentCart = $_SESSION['shoppingCart']; // +29
+        $this->currentCart = $_SESSION['cart']; // +29
         //foreach ($currentCart as $item) { // -29
             foreach ($this->currentCart as $item) { // +29
 
@@ -63,7 +63,7 @@ class ShoppingCartModel
 
     public function removeFromCart($id)
     {
-        $this->currentCart = $_SESSION['shoppingCart']; // +29
+        $this->currentCart = $_SESSION['cart']; // +29
 
         if ($this->isInCart($id)) {
                 foreach ($this->currentCart as $item) { // +29
@@ -74,8 +74,7 @@ class ShoppingCartModel
         }
 
         $currentCart = $this->removeEmptyArticles($id, $this->currentCart); // +29
-        //$_SESSION['shoppingCart'] = $currentCart; // zaten
-        $_SESSION['shoppingCart'] = array_values($currentCart);
+        $_SESSION['Cart'] = array_values($currentCart);
     }
 
     public function removeEmptyArticles($id, $currentCart) // +29
@@ -88,11 +87,9 @@ class ShoppingCartModel
         return $this->currentCart; // +29
     }
 
-
-
-
-    public function listCart()
+    public function listCart($data)
     {
+
 
     }
 
