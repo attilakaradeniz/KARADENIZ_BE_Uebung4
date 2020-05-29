@@ -81,7 +81,7 @@ class UserInputsController
                     $this->articleId = filter_input(INPUT_GET, "articleId", FILTER_SANITIZE_STRING);
 
                     $shoppingCart->removeFromCart($this->articleId);
-
+                    $this->view->output($_SESSION);
                     break;
 
                 case 'articleNameById' : // TEST

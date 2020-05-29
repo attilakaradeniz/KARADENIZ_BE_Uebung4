@@ -75,7 +75,6 @@ class ShoppingCartModel
 
         $currentCart = $this->removeEmptyArticles($id, $currentCart);
         $_SESSION['shoppingCart'] = $currentCart;
-
     }
 
     public function removeEmptyArticles($id, $currentCart)
@@ -88,6 +87,9 @@ class ShoppingCartModel
         }
         return $currentCart;
     }
+
+
+
 
     public function listCart()
     {
